@@ -1,5 +1,4 @@
 <VirtualHost *:80>
-    ServerName symfony.dev
     DocumentRoot {{ doc_root }}
     <Directory {{ doc_root }}>
         # enable the .htaccess rewrites
