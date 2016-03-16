@@ -1,0 +1,7 @@
+---
+- name: Install Apache2
+  apt: name=apache2 state=present
+
+- name: Create apache2.conf
+  template: src=default.tpl dest=/etc/apache2/apache2.conf
+  notify: restart apache
