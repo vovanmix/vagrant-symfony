@@ -1,4 +1,4 @@
 ---
-- name: Install "{{php_version}}"-CLI
+- name: Install {{ php_version }}-CLI
   sudo: yes
-  apt:  package="{{php_version}}"-cli state=latest
+  apt:  package={{ php_version }}-cli state=latest
