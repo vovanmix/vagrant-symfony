@@ -1,7 +1,9 @@
 ---
 - name: Install Apache2
+  sudo: yes
   apt: name=apache2 state=present
 
 - name: Create apache2.conf
+  sudo: yes
   template: src=default.tpl dest=/etc/apache2/apache2.conf
   notify: restart apache
