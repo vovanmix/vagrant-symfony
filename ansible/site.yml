@@ -9,17 +9,17 @@
       - mcrypt
       - vim
     php_packages:
-      - { name: dev, package: "{{php_version}}"-dev }
+      - { name: dev, package: "{{ php_version }}"-dev }
       - { name: pear, package: php-pear }
-      - { name: xdebug, package: "{{php_version}}"-xdebug }
-      - { name: curl, package: "{{php_version}}"-curl }
-      - { name: mcrypt, package: "{{php_version}}"-mcrypt }
-      - { name: mysql, package: "{{php_version}}"-mysql }
-      - { name: redis, package: "{{php_version}}"-redis }
+      - { name: xdebug, package: "{{ php_version }}"-xdebug }
+      - { name: curl, package: "{{ php_version }}"-curl }
+      - { name: mcrypt, package: "{{ php_version }}"-mcrypt }
+      - { name: mysql, package: "{{ php_version }}"-mysql }
+      - { name: redis, package: "{{ php_version }}"-redis }
       - { name: apc, package: php-apc }
-      - { name: memcached, package: "{{php_version}}"-memcached }
-      - { name: sqlite, package: "{{php_version}}"-sqlite }
-      - { name: gd, package: "{{php_version}}"-gd }
+      - { name: memcached, package: "{{ php_version }}"-memcached }
+      - { name: sqlite, package: "{{ php_version }}"-sqlite }
+      - { name: gd, package: "{{ php_version }}"-gd }
     php_extensions:
       - { name: "jsmin", package: "pecl.php.net/jsmin-beta" }
       - { name: "mongo", package: "pecl.php.net/mongo" }
