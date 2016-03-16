@@ -5,5 +5,5 @@
 
 - name: Create apache2.conf
   sudo: yes
-  template: src=default.tpl dest=/etc/apache2/apache2.conf
+  template: src=default.tpl dest=/etc/apache2/sites-enabled/default.conf
   notify: restart apache
