@@ -23,15 +23,16 @@
       - { name: "mongo", package: "pecl.php.net/mongo" }
       - { name: "xhprof", package: "pecl.php.net/xhprof-beta" }
     php_ppa: php5
+    php_version: php5
     nodejs:
       version: _5.x
       packages: [casperjs, phantomjs, bower, gulp]
   roles:
     - init
     - apache
-    - php5-apache
-    - php5-cli
-    - php5-common
+    - php-apache
+    - php-cli
+    - php-common
     - composer
     - phpunit
     - mysql
