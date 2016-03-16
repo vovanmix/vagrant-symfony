@@ -1,7 +1,0 @@
----
-- name: Install PHP5
-  sudo: yes
-  apt:  name="php5" state=present
-- name: Install PHP5-apache
-  sudo: yes
-  apt:  name="libapache2-mod-php5" state=present
