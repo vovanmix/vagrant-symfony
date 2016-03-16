@@ -1,4 +1,4 @@
 ---
-- name: Install "{{php_version}}"-FPM
+- name: Install {{ php_version }}-FPM
   sudo: yes
-  apt:  package="{{php_version}}"-fpm state=latest
+  apt:  package={{ php_version }}-fpm state=latest
