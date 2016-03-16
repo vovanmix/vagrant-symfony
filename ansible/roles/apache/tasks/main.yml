@@ -3,6 +3,11 @@
   sudo: yes
   apt: name=apache2 state=present
 
+- name: remove all default vhosts
+  file: state=absent path=/etc/apache2/sites-enabled
+  
+- file: state=directory path=/etc/apache2/sites-enabled
+
 - name: Create apache2.conf
   sudo: yes
   template: src=default.tpl dest=/etc/apache2/sites-enabled/default.conf
