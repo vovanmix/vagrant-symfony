@@ -8,7 +8,7 @@
   sudo: yes
   command: /usr/sbin/{{ php_version }}enmod {{ item.name }} creates=/etc/{{ php_version }}/cli/conf.d/20-{{ item.name }}.ini
   with_items: php_packages
-  notify: restart "{{php_version}}"-fpm
+  notify: restart {{php_version}}-fpm
 
 - name: Install PHP extensions
   sudo: yes
