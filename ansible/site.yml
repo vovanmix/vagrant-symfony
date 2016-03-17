@@ -27,6 +27,7 @@
     nodejs:
       version: _5.x
       packages: [casperjs, phantomjs, bower, gulp]
+    use_php_fpm: false
   roles:
     - init
     - apache
