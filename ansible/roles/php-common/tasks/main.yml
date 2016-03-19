@@ -24,7 +24,9 @@
   command: /usr/sbin/{{ php_version }}enmod {{ item.name }} creates=/etc/{{ php_version }}/cli/conf.d/20-{{ item.name }}.ini
   with_items: php_extensions
 
-- name: notify restart php-fpm
-  debug: "notify restart php-fpm"
+- name: Enable PHP extensions
+  sudo: yes
+  command: /usr/sbin/{{ php_version }}enmod {{ item.name }} creates=/etc/{{ php_version }}/cli/conf.d/20-{{ item.name }}.ini
+  with_items: php_extensions
   notify: restart php-fpm
   when: use_php_fpm
