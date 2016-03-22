@@ -43,3 +43,6 @@
     - redis
     - memcached
     - nodejs
+  post_tasks:
+      - name: change owner to www-data and change permissions
+        file: path=/tmp/symfony state=directory mode=0777 owner=www-data recurse=yes
