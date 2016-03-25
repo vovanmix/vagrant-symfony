@@ -1,12 +1,12 @@
 ---
 - name:    Download PHPUnit
   sudo:    no
-  command: wget https://phar.phpunit.de/phpunit.phar
+  command: wget https://phar.phpunit.de/phpunit-{{ phpunit_version }}.phar
 
 - name:    Add executable permissions to PHPUnit
   sudo:    no
-  command: chmod +x phpunit.phar
+  command: chmod +x phpunit-{{ phpunit_version }}.phar
 
 - name:    Move PHPunit to /usr/local/bin
   sudo:    yes
-  command: mv phpunit.phar /usr/local/bin/phpunit
+  command: mv phpunit-{{ phpunit_version }}.phar /usr/local/bin/phpunit
