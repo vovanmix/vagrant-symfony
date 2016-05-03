@@ -7,6 +7,10 @@
   sudo: yes
   apache2_module: name=rewrite state=present
 
+- name: enabled mod_headers
+  sudo: yes
+  apache2_module: name=headers state=present
+
 - name: remove all default vhosts
   file: state=absent path=/etc/apache2/sites-enabled
   
